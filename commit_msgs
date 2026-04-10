@@ -1,0 +1,18 @@
+
+-----
+
+feat: implement complete Order 0 Expert System shell and PySide6 GUI
+
+- Engine: Build Forward Chaining (data-driven, monotonic) and 
+  Backward Chaining (goal-driven, DFS with backtracking) algorithms.
+- Logic: Implement conflict resolution strategy prioritizing rules 
+  with the highest number of premises, then by lowest Rule ID.
+- Knowledge Base: Add dynamic JSON parsing for facts and Horn clauses 
+  with strict validation and custom error handling.
+- Trace: Add detailed, step-by-step reasoning trace logging (rule 
+  evaluation, conflict resolution, derived facts, and backtracking).
+- UI: Develop an advanced PySide6 graphical interface featuring dark 
+  mode, tabbed chaining modes, dynamic input generation (checkboxes/
+  dropdowns), and a rich-text colored execution console.
+- Demos: Include sample knowledge bases (Animal Classification and 
+  PC Troubleshooting) to demonstrate engine capabilities.

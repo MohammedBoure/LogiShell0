@@ -1,0 +1,85 @@
+{
+  "_comment": "Computer Troubleshooting Knowledge Base",
+
+  "facts": [
+    "computer_does_not_start",
+    "screen_is_black",
+    "system_is_slow",
+    "blue_screen_error"
+  ],
+
+  "rules": [
+    {
+      "id": "R1",
+      "description": "If the computer does not start, then there is a general hardware issue.",
+      "premises": ["computer_does_not_start"],
+      "conclusion": "hardware_issue"
+    },
+    {
+      "id": "R2",
+      "description": "If the computer does not start and there is no fan noise, then the problem is with the power supply (a more specific rule).",
+      "premises": ["computer_does_not_start", "no_fan_noise"],
+      "conclusion": "power_supply_issue"
+    },
+    {
+      "id": "R3",
+      "description": "If the computer does not start and emits continuous beeping sounds, then the problem is with the motherboard or RAM.",
+      "premises": ["computer_does_not_start", "beeping_sound"],
+      "conclusion": "motherboard_or_ram_issue"
+    },
+    {
+      "id": "R4",
+      "description": "If there is a motherboard or RAM issue and the beeps are short and continuous, then the RAM is faulty.",
+      "premises": ["motherboard_or_ram_issue", "continuous_short_beeps"],
+      "conclusion": "ram_failure"
+    },
+    {
+      "id": "R5",
+      "description": "If the screen is black, then there is a display issue.",
+      "premises": ["screen_is_black"],
+      "conclusion": "display_issue"
+    },
+    {
+      "id": "R6",
+      "description": "If there is a display issue and the fans are running, then the problem is with the graphics card (GPU).",
+      "premises": ["display_issue", "fans_are_running"],
+      "conclusion": "gpu_failure"
+    },
+    {
+      "id": "R7",
+      "description": "If there is a display issue and the display cable is disconnected, then the problem is simply the cable.",
+      "premises": ["display_issue", "cable_disconnected"],
+      "conclusion": "cable_issue"
+    },
+    {
+      "id": "R8",
+      "description": "If the system is slow, then there is a performance issue.",
+      "premises": ["system_is_slow"],
+      "conclusion": "performance_issue"
+    },
+    {
+      "id": "R9",
+      "description": "If there is a performance issue and the hard drive is making clicking noises, then the hard drive is failing.",
+      "premises": ["performance_issue", "hard_drive_clicking"],
+      "conclusion": "failing_hard_drive"
+    },
+    {
+      "id": "R10",
+      "description": "If there is a performance issue and the temperature is very high, then the problem is with the cooling system.",
+      "premises": ["performance_issue", "high_temperature"],
+      "conclusion": "overheating_issue"
+    },
+    {
+      "id": "R11",
+      "description": "If a blue screen error appears, then there is a system conflict.",
+      "premises": ["blue_screen_error"],
+      "conclusion": "system_conflict"
+    },
+    {
+      "id": "R12",
+      "description": "If there is a system conflict and new drivers were recently installed, then the problem is with hardware drivers.",
+      "premises": ["system_conflict", "recently_installed_drivers"],
+      "conclusion": "driver_issue"
+    }
+  ]
+}

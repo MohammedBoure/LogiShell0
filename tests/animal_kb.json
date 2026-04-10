@@ -1,0 +1,110 @@
+{
+    "_comment": "Animal Classification Knowledge Base — a classic expert-system demo domain.",
+
+    "facts": [
+        "has_hair",
+        "gives_milk",
+        "has_feathers",
+        "can_fly",
+        "lays_eggs"
+    ],
+
+    "rules": [
+        {
+            "id": "R1",
+            "description": "An animal that has hair is a mammal.",
+            "premises": ["has_hair"],
+            "conclusion": "is_mammal"
+        },
+        {
+            "id": "R2",
+            "description": "An animal that gives milk is a mammal.",
+            "premises": ["gives_milk"],
+            "conclusion": "is_mammal"
+        },
+        {
+            "id": "R3",
+            "description": "An animal that has hair AND gives milk is definitely a mammal (more specific).",
+            "premises": ["has_hair", "gives_milk"],
+            "conclusion": "is_mammal"
+        },
+        {
+            "id": "R4",
+            "description": "An animal that has feathers is a bird.",
+            "premises": ["has_feathers"],
+            "conclusion": "is_bird"
+        },
+        {
+            "id": "R5",
+            "description": "An animal that can fly AND lays eggs is a bird.",
+            "premises": ["can_fly", "lays_eggs"],
+            "conclusion": "is_bird"
+        },
+        {
+            "id": "R6",
+            "description": "A mammal that has hooves is an ungulate.",
+            "premises": ["is_mammal", "has_hooves"],
+            "conclusion": "is_ungulate"
+        },
+        {
+            "id": "R7",
+            "description": "A mammal that chews cud is an ungulate.",
+            "premises": ["is_mammal", "chews_cud"],
+            "conclusion": "is_ungulate"
+        },
+        {
+            "id": "R8",
+            "description": "A mammal that is carnivorous is a carnivore.",
+            "premises": ["is_mammal", "eats_meat"],
+            "conclusion": "is_carnivore"
+        },
+        {
+            "id": "R9",
+            "description": "A mammal with pointed teeth and claws is a carnivore.",
+            "premises": ["is_mammal", "has_pointed_teeth", "has_claws"],
+            "conclusion": "is_carnivore"
+        },
+        {
+            "id": "R10",
+            "description": "An ungulate with long legs and long neck is a giraffe.",
+            "premises": ["is_ungulate", "has_long_neck", "has_long_legs", "has_dark_spots"],
+            "conclusion": "is_giraffe"
+        },
+        {
+            "id": "R11",
+            "description": "An ungulate with black and white stripes is a zebra.",
+            "premises": ["is_ungulate", "has_black_and_white_stripes"],
+            "conclusion": "is_zebra"
+        },
+        {
+            "id": "R12",
+            "description": "A carnivore with tawny color and dark spots is a cheetah.",
+            "premises": ["is_carnivore", "has_tawny_color", "has_dark_spots"],
+            "conclusion": "is_cheetah"
+        },
+        {
+            "id": "R13",
+            "description": "A carnivore with tawny color and black stripes is a tiger.",
+            "premises": ["is_carnivore", "has_tawny_color", "has_black_stripes"],
+            "conclusion": "is_tiger"
+        },
+        {
+            "id": "R14",
+            "description": "A bird that cannot fly but runs fast is an ostrich.",
+            "premises": ["is_bird", "cannot_fly", "runs_fast"],
+            "conclusion": "is_ostrich"
+        },
+        {
+            "id": "R15",
+            "description": "A bird that cannot fly but swims well is a penguin.",
+            "premises": ["is_bird", "cannot_fly", "swims_well"],
+            "conclusion": "is_penguin"
+        },
+        {
+            "id": "R16",
+            "description": "A bird that flies well and is a good flyer is an albatross.",
+            "premises": ["is_bird", "can_fly", "flies_well"],
+            "conclusion": "is_albatross"
+        }
+    ]
+}
