@@ -16,3 +16,6 @@ feat: implement complete Order 0 Expert System shell and PySide6 GUI
   dropdowns), and a rich-text colored execution console.
 - Demos: Include sample knowledge bases (Animal Classification and 
   PC Troubleshooting) to demonstrate engine capabilities.
+-----
+
+update README file 
